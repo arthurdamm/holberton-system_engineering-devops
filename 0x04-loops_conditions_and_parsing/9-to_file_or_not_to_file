@@ -1,4 +1,4 @@
-#! /usr/bin/env bash
+#!/usr/bin/env bash
 # Checks file existence, emptiness, and regularity
 
 file="holbertonschool"
