@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Displays contents of /etc/passwd with read n cut
+exec 3< /etc/passwd
+while IFS=: read -a field -u 3; do
+	echo The user "${field[0]}" is part of the "${field[3]}" gang, lives\
+ in "${field[5]}" and rides "${field[6]}". "${field[2]}"\'s place is\
+ protected by the passcode "${field[1]}", more info about the user here:\
+ "${field[4]}"
+done
