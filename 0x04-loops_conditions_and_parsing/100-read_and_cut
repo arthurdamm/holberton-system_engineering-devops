@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Displays contents of /etc/passwd with read n cut
+exec 3< /etc/passwd
+while read -u 3; do
+	echo "$REPLY" | cut -d':' -f1,3,6
+done
