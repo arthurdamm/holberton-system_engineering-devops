@@ -4,15 +4,15 @@
 file="holbertonschool"
 
 if [ ! -e "$file" ]; then
-	echo "$file" does not exist
+	echo "$file" file does not exist
 	exit 0
 fi
 echo "$file" file exists
 
 if [ -s "$file" ]; then
-	echo "$file" is not empty
+	echo "$file" file is not empty
 else
-	echo "$file" is empty
+	echo "$file" file is empty
 fi
 
 if [ -f "$file" ]; then
