@@ -5,5 +5,5 @@ apt-get -y install nginx
 echo "Holberton School" > /var/www/html/index.nginx-debian.html
 echo "Ceci n'est pas une page" > /usr/share/nginx/html/custom_404.html
 sed -i "/server_name _;/ a\\\trewrite ^/redirect_me http://www.holbertonschool.com permanent;" /etc/nginx/sites-available/default
-sed -i "/redirect_me/ a\\\terror_page 404 /custom_404.html;\n\tlocation = /custom_404.html { root /usr/share/nginx/html; internal; }" /etc/nginx/sites-available/default
+sed -i "/redirect_me/ a error_page 404 /custom_404.html;\nlocation = /custom_404.html {\nroot /usr/share/nginx/html;\ninternal;\n}" /etc/nginx/sites-available/default
 service nginx start
