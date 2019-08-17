@@ -12,8 +12,8 @@ backend foo
     server foo2 34.74.18.52:80 check
 "
 apt-get -y install software-properties-common
-add-apt-repository -y ppa:vbernat/haproxy-1.5
+add-apt-repository -y ppa:vbernat/haproxy-2.0
 apt-get -y update
-apt-get -y install haproxy=1.5.\*
+apt-get -y install haproxy=2.0.\*
 echo "$FOO" >> /etc/haproxy/haproxy.cfg
 service haproxy start
