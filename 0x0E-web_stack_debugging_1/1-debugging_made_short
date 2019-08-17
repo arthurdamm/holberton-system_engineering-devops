@@ -2,4 +2,4 @@
 # Sets nginx to use 80 instead of 8080
 sed -i 's/8080/80/g' /etc/nginx/sites-enabled/default
 service nginx restart
-kill -9 "$(pgrep nginx | head -1)"
+pkill -9 -f "/usr/sbin/nginx"
