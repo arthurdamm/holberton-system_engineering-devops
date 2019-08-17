@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 # Installs Apache instead of nginx
-service nginx stop
 apt-get -y install apache2
+cp /usr/share/nginx/html/index.html /var/www/html/index.html
 service apache2 start
