@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Installs Apache instead of nginx
-apt-get -y install apache2
-cp /usr/share/nginx/html/index.html /var/www/html/index.html
-service apache2 start
+# Sets nginx to use 80 instead of 8080
+sed -i 's/8080/80/g' /etc/nginx/sites-enabled/default
+service nginx restart
+kill -9 $(pgrep nginx | head -1)
