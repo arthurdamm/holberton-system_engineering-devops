@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 # Installs Apache instead of nginx
 apt-get -y install apache2
-cp /usr/share/nginx/html/index.html /var/www/html/index.html
 sed -i '12 a ErrorDocument 400 "Welcome to nginx!"' /etc/apache2/sites-available/000-default.conf
 service apache2 start
