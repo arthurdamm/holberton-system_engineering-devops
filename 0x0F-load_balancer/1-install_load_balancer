@@ -16,3 +16,4 @@ add-apt-repository -y ppa:vbernat/haproxy-1.5
 apt-get -y update
 apt-get -y install haproxy=1.5.\*
 echo "$FOO" >> /etc/haproxy/haproxy.cfg
+service haproxy start
