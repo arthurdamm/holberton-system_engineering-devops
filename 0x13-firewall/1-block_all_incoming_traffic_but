@@ -1,7 +1,7 @@
-sudo ufw status verbose
-sudo ufw default deny incoming
-sudo ufw default allow outgoing
-sudo ufw allow 22
-sudo ufw allow 443
-sudo ufw allow 80
-sudo ufw enable
+ufw status verbose
+ufw default deny incoming
+ufw default allow outgoing
+ufw allow 22
+ufw allow 443
+ufw allow 80
+ufw enable
