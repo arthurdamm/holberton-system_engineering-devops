@@ -9,9 +9,9 @@ base_url = 'https://jsonplaceholder.typicode.com/'
 
 def do_request():
     '''Performs request'''
-    if not len(sys.argv):
-        return print('USAGE:', __name__, '<employee id>')
-    eid = sys.argv[1]0
+    if len(sys.argv) < 2:
+        return print('USAGE:', __file__, '<employee id>')
+    eid = sys.argv[1]
     try:
         _eid = int(sys.argv[1])
     except ValueError:
