@@ -35,7 +35,7 @@ def print_results(word_list, hot_list):
         count[word] = 0
     for title in hot_list:
         for word in word_list:
-            count[word] = count[word] + title.count(word)
+            count[word] = count[word] + title.count(word + ' ')
 
     count = {k: v for k, v in count.items() if v > 0}
     for word in sorted(list(count.keys()),
