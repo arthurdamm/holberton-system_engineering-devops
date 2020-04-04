@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-# Sets nginx to use 80 instead of 8080
-sed -i 's/8080/80/g' /etc/nginx/sites-enabled/default
+# This script changes the config without killing the worker processes
+sed -i "s/8080/80/g" /etc/nginx/sites-enabled/default
 pkill -1 -f "/usr/sbin/nginx"
